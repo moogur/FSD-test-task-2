@@ -1,0 +1,14 @@
+ul.find-room-list
+  li.find-room-list__date-item.find-room-list__date-item_float-right
+    label.find-room-list__label выезд
+      input.find-room-list__input(type="date", name="arrival", tabindex="2", placeholder="1")
+  li.find-room-list__date-item
+    label.find-room-list__label прибытие
+      input.find-room-list__input(type="date", name="departure", tabindex="1")
+  li.find-room-list__item
+    label.find-room-list__label гости
+      select.find-room-list__input(tabindex="3")
+        option Пункт 1
+        option Пункт 2
+  li.find-room-list__item
+    input.find-room-list__button-input(type="submit", value="подобрать номер", tabindex="4")

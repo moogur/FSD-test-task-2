@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "enabled": true,
+  "language": "en",
+  "minWordLength": 3,
+  "maxNumberOfProblems": 1000,
+  "numSuggestions": 8,
+  "words": [
+    "devtool",
+    "hmr",
+    "Alexey",
+    "Dvoretsky",
+    "linebreak",
+    "maxBOF",
+    "img",
+    "tabindex"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    ".vscode",
+    ".git",
+    ".gitignore",
+    "package-lock.json"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "eslint.nodePath": "/usr/local/lib/node_modules",
+  "eslint.options": {
+    "configFile": ".vscode/.eslintrc"
+  },
+  "files.exclude": {
+    "node_modules": true,
+    //"package.json": true,
+    "package-lock.json": true,
+    ".gitignore": true,
+    "*.md": true
+  }
+}

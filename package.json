@@ -1,0 +1,40 @@
+{
+  "name": "fsd-test-task-2",
+  "version": "1.0.0",
+  "description": "test task number 2 from full stack development",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --mode development --open --inline --hot",
+    "prod": "NODE_ENV=production webpack --mode production",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Alexey Dvoretsky",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "=1.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "gh-pages": "^2.1.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "pug": "^2.0.4",
+    "pug-html-loader": "^1.1.5",
+    "sass-loader": "^7.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1",
+    "reset-css": "^4.0.1"
+  }
+}
