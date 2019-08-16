@@ -1,0 +1,32 @@
+- const CHECK_BUT = [
+-  {label: "Можно курить", checked: "false"},
+-  {label: "Можно с питомцами", checked: "true"},
+-  {label: "Можно пригласить гостей (до 10 человек)", checked: "true"}
+-]
+
+form.search-room
+  label.search-room__label даты пребывания в отеле
+    input.search-room__input(type="text", placeholder="19 авг - 23 авг")
+    span.search-room__expand
+  label.search-room__label гости
+    input.search-room__input.search-room__input_guest(type="text", placeholder="3 гостя, 1 младенец")
+    span.search-room__expand.search-room__expand_guest
+  div.search-room__slider
+    p.search-room__slider-price 5 000₽ - 10 000₽
+    label.search-room__slider-label диапазон цены
+    span.search-room__slider-text Стоимость за сутки пребывания в номере
+  label.search-room__label.search-room__label_buttons Checkbox Buttons
+  each val in CHECK_BUT
+    label.search-room__check-but #{val.label}
+      input.search-room__checkbox(type="checkbox", checked=checked)
+  label.search-room__label.search-room__label_availability доступность
+  label.search-room__check-but.search-room__check-but_bold Широкий коридор
+    span.search-room__check-but_text Ширина коридоров в номере не менее 91 см.
+    input.search-room__checkbox(type="checkbox")
+  label.search-room__check-but.search-room__check-but_bold Помощник для инвалидов
+    span.search-room__check-but_text.search-room__check-but_width На 1 этаже вас встретит специалист и проводит до номера.
+    input.search-room__checkbox(type="checkbox")
+  label.search-room__label.search-room__label_room-margin удобства номера
+    input.search-room__input.search-room__input_guest(type="text", placeholder="2 спальни, 2 кровати...")
+    span.search-room__expand.search-room__expand_guest
+  span.search-room__label.search-room__label_added-convenience дополнительные удобства

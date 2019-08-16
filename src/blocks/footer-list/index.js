@@ -1,6 +1,6 @@
 import './footer-list.sass';
 
-// Compoents
+// Components
 import '../footer-logo';
 import '../footer-list-navigation';
 import '../footer-list-about-us';

@@ -1,0 +1,93 @@
+.find-room
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 38px 29px 30px 29px
+  max-width: 380px
+
+  &__header
+    font-family: Quicksand
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+    color: #1F2041
+    letter-spacing: 2.5px
+
+  &__item-label
+    font-family: Montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+    display: inline-block
+    width: 100%
+    margin-top: 21px
+    position: relative
+
+    &_width-150
+      max-width: 150px
+
+    &_right
+      margin-left: 20px
+
+  &__item-input
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.75)
+    width: 100%
+    max-width: inherit
+    display: block
+    padding: 10px 35px 13px 15px
+    margin-top: 6px
+
+    &_guest
+      margin-top: 5px
+      padding-top: 12px
+      padding-bottom: 12px
+
+  &__item-expand
+    position: absolute
+    content: url('/img/expand-more.svg')
+    top: 31px
+    right: 10px
+    cursor: pointer
+
+  &__item-link
+    position: relative
+    cursor: pointer
+
+  &__item-submit
+    font-family: Montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    padding: 14px 0
+    margin-top: 31px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+    width: 100%
+    display: block
+    text-decoration: none
+
+  &__item-arrow
+    content: url("/img/arrow-forward-white.svg")
+    position: absolute
+    top: 10px
+    right: 10px
+

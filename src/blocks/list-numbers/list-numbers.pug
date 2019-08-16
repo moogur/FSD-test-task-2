@@ -1,0 +1,10 @@
+include ../one-room/one-room
+
+- const ROOMS = [
+-  {number: 888, lux: true, price: "9 990", stars: 5, comments: 145}
+-]
+
+article.list_numbers
+  h2.list_numbers__header Номера, которые мы для вас подобрали
+  each item in ROOMS
+    +one-room(item)

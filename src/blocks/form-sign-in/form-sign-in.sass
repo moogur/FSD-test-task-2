@@ -6,7 +6,8 @@
   border-radius: 4px
   max-width: 380px
   display: inline-block
-  padding: 39px 30px 0 30px
+  padding: 39px 29px 0 29px
+  text-align: start
 
   &__header
     text-align: start
@@ -16,9 +17,9 @@
     font-size: 24px
     line-height: 30px
     color: #1F2041
+    margin-bottom: 20px
 
   &__input
-    margin-top: 20px
     width: 100%
     background: #FFFFFF
     border: 1px solid rgba(31, 32, 65, 0.25)
@@ -30,10 +31,16 @@
     font-size: 14px
     line-height: 24px
     color: rgba(31, 32, 65, 0.25)
-    padding: 9px 15px 9px 13px
+    padding: 9px 15px 9px 15px
+
+    &_margin-5
+      margin-top: 5px
 
     &_margin-10
       margin-top: 10px
+
+  &__switch
+    margin-top: 7px
 
   &__label
     font-family: Montserrat
@@ -44,17 +51,30 @@
     text-transform: uppercase
     color: #1F2041
     text-align: start
+    margin-top: 17px
+    display: block
 
-  &__label-radio
-    font-family: Montserrat
-    font-style: normal
-    font-weight: normal
-    font-size: 14px
-    line-height: 24px
-    color: rgba(31, 32, 65, 0.75)
+    &_padding
+      padding-top: 4px
+
+  &__toggle-switch
+    margin-top: 6px
+
+    &-label
+      font-family: Montserrat
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 24px
+      color: rgba(31, 32, 65, 0.75)
+      margin-left: 11px
+
+  &__container
+    position: relative
+    margin-top: 24px
 
   &__submit
-    margin-top: 19px
+    display: block
     width: 100%
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius: 22px
@@ -66,10 +86,15 @@
     text-align: center
     text-transform: uppercase
     color: #FFFFFF
-    padding: 14px 0 13px 0
-    text-align: center
+    padding: 14px 0 15px 0
     box-sizing: border-box
     cursor: pointer
+
+  &__arrow
+    position: absolute
+    content: url('/img/arrow-forward-white.svg')
+    top: 10px
+    right: 10px
 
   &__text
     font-family: Montserrat
@@ -79,12 +104,12 @@
     line-height: 18px
     color: #000000
     float: left
-    margin-top: 41px
+    margin: 42px 0 0 1px
     cursor: pointer
 
   &__create
-    margin: 29px 0 31px 0
-    border-radius: 17px
+    margin: 30px 0 31px 0
+    border-radius: 22px
     font-family: Montserrat
     font-style: normal
     font-weight: bold
@@ -94,6 +119,6 @@
     color: #BC9CFF
     background: #ffffff
     border: 2px solid #BC9CFF
-    padding: 13px 16px 12px 15px
+    padding: 12px 24px 12px 23px
     float: right
     cursor: pointer

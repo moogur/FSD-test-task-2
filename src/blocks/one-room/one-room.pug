@@ -1,0 +1,6 @@
+mixin one-room(data)
+  each ind, item in data
+    article.one-room
+      div.one-room__image
+        img(src="/img/room-" + ind + ".jpg", alt="image room number" + ind)
+      span.one-room__number № #{ind}

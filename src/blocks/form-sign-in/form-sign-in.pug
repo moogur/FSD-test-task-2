@@ -2,16 +2,18 @@ form.form-sign-in
   h2.form-sign-in__header Регистрация аккаунта
   input.form-sign-in__input(type="text", placeholder="Имя", tabindex="1")
   input.form-sign-in__input.form-sign-in__input_margin-10(type="text", placeholder="Фамилия", tabindex="2")
-  label.form-sign-in__label-radio Мужчина
-    input(type="radio", tabindex="3")
-  label.form-sign-in__label-radio Женщина
-    input(type="radio", tabindex="4")
-  label.form-sign-in__label дата рождения
-    input.form-sign-in__input(type="text", placeholder="ДД.ММ.ГГГГ", tabindex="5")
-  label.form-sign-in__label данные для входа в сервис
-    input.form-sign-in__input(type="email", placeholder="Email", tabindex="6")
+  div.form-sign-in__switch
+    include ../switch/switch
+  label.form-sign-in__label.form-sign-in__label_block дата рождения
+    input.form-sign-in__input.form-sign-in__input_margin-5(type="text", placeholder="ДД.ММ.ГГГГ", tabindex="5")
+  label.form-sign-in__label.form-sign-in__label_padding данные для входа в сервис
+    input.form-sign-in__input.form-sign-in__input_margin-5(type="email", placeholder="Email", tabindex="6")
     input.form-sign-in__input.form-sign-in__input_margin-10(type="password", placeholder="Пароль", tabindex="7")
-
-  input.form-sign-in__submit(type="submit", value="войти", tabindex="9")
-  p.form-sign-in__text Нет аккаунта на Toxin?
+  div.form-sign-in__toggle-switch
+    include ../toggle-switch/toggle-switch.pug
+    span.form-sign-in__toggle-switch-label Получать спецпредложения
+  div.form-sign-in__container
+    a.form-sign-in__submit(tabindex="9") перейти к оплате
+    span.form-sign-in__arrow
+  p.form-sign-in__text Уже есть аккаунт на Toxin
   input.form-sign-in__create(type="button", value="войти")

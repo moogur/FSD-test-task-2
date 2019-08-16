@@ -1,0 +1,39 @@
+.switch
+
+  &__input
+    -moz-appearance: none
+    -webkit-appearance: none
+    appearance: none
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 10px
+    width: 20px
+    height: 20px
+    margin-left: 0px
+    cursor: pointer
+    margin-right: 11px
+
+    &:checked
+      border: 1px solid #BC9CFF
+
+  &__label
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+    display: inline-block
+    margin-right: 19px
+    cursor: pointer
+
+    &_man:after
+      content: "Мужчина"
+      position: relative
+      bottom: 6px
+
+    &_woman:after
+      content: "Женщина"
+      position: relative
+      bottom: 6px

@@ -1,0 +1,137 @@
+.search-room
+  max-width: 266px
+  padding-top: 10px
+  float: left
+
+  &__label
+    font-family: Montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+    display: inline-block
+    width: 100%
+    position: relative
+
+    &_buttons
+      margin: 29px 0 18px 0
+
+    &_availability
+      margin: 20px 0 16px 0
+
+    &_room-margin
+      margin-top: 20px
+
+    &_added-convenience
+      position: relative
+      margin-top: 9px
+      cursor: pointer
+
+      &:after
+        position: absolute
+        content: url('/img/expand-more.svg')
+        top: -4px
+        right: 10px
+        cursor: pointer
+
+  &__input
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.75)
+    width: 100%
+    max-width: inherit
+    display: block
+    padding: 11px 35px 13px 14px
+    margin: 5px 0 21px 0
+
+    &_guest
+      margin-top: 4px
+      padding: 12px 35px 12px 14px
+
+  &__expand
+    position: absolute
+    content: url('/img/expand-more.svg')
+    top: 31px
+    right: 10px
+    cursor: pointer
+
+    &_guest
+      top: 29px
+
+  &__slider
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    color: rgba(31, 32, 65, 0.5)
+    margin-top: 10px
+
+    &-label
+      font-family: Montserrat
+      font-style: normal
+      font-weight: bold
+      font-size: 12px;
+      line-height: 15px
+      text-transform: uppercase
+      color: #1F2041
+
+    &-price
+      float: right
+
+    &-text
+      display: block
+      margin-top: 43px
+
+  &__check-but
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.5)
+    display: block
+    margin-bottom: 12px
+    position: relative
+    padding-left: 30px
+    max-width: 205px
+    cursor: pointer
+
+    &_bold
+      font-weight: bold
+      margin-bottom: 9px
+
+    &_text
+      font-weight: normal
+      display: block
+      font-size: 12px
+      line-height: 14px
+      margin-top: 7px
+
+    &_width
+      width: 225px
+
+  &__checkbox
+    margin-right: 10px
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    width: 30px
+    height: 30px
+    position: absolute
+    top: -9px
+    left: -9px
+    cursor: pointer
+
+    &:checked
+      border: 1px solid #BC9CFF

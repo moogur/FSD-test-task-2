@@ -1,0 +1,14 @@
+form.find-room
+  h2.find-room__header Найдём номера под ваши пожелания
+  label.find-room__item-label.find-room__item-label_width-150 прибытие
+    input.find-room__item-input(type="text", tabindex="1", placeholder="ДД.ММ.ГГГГ")
+    span.find-room__item-expand
+  label.find-room__item-label.find-room__item-label_width-150.find-room__item-label_right выезд
+    input.find-room__item-input(type="text", tabindex="2", placeholder="ДД.ММ.ГГГГ")
+    span.find-room__item-expand
+  label.find-room__item-label гости
+    input.find-room__item-input.find-room__item-input_guest(type="text", tabindex="3", placeholder="Сколько гостей")
+    span.find-room__item-expand
+  div.find-room__item-link
+    a.find-room__item-submit(href="/search-room.html", tabindex="4") подобрать номер
+    span.find-room__item-arrow
