@@ -4,15 +4,81 @@
   background: #FFFFFF
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
   border-radius: 4px
-  font-family: Montserrat
-  font-style: normal
-  font-weight: normal
+  overflow: hidden
+  padding-bottom: 20px
 
   &__number
-    font-family: Quicksand
+    font-family: OpenSans, Quicksand, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 14px
     line-height: 17px
     color: #1F2041
+
+  &__description
+    margin-top: 20px
+    padding: 0 20px 0 20px
+
+    &-number
+      font-family: OpenSans, Quicksand, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 13px
+      color: #1F2041
+
+      &_icon
+        font-family: Quicksand, OpenSans, sans-serif
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 13px
+        color: #1F2041
+
+    &-lux
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      text-transform: uppercase
+      color: #BC9CFF
+
+    &-price
+      display: block
+      float: right
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 18px
+      color: rgba(31, 32, 65, 0.5)
+
+  &__line
+    height: 1px
+    background-color: #E5E5E5
+    margin: 10px auto 0 auto
+    width: 230px
+
+  &__comments
+    margin-top: 8px
+    padding: 0 20px 0 20px
+
+    &-rating
+
+      &_plus
+        content: url('/img/star.svg')
+
+      &_minus
+        content: url('/img/star-border.svg')
+
+    &-number
+      display: block
+      float: right
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 18px
+      color: rgba(31, 32, 65, 0.5)
 

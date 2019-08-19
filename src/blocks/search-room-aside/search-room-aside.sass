@@ -1,10 +1,9 @@
 .search-room
   max-width: 266px
   padding-top: 10px
-  float: left
 
   &__label
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -24,24 +23,12 @@
     &_room-margin
       margin-top: 20px
 
-    &_added-convenience
-      position: relative
-      margin-top: 9px
-      cursor: pointer
-
-      &:after
-        position: absolute
-        content: url('/img/expand-more.svg')
-        top: -4px
-        right: 10px
-        cursor: pointer
-
   &__input
     background: #FFFFFF
     border: 1px solid rgba(31, 32, 65, 0.25)
     box-sizing: border-box
     border-radius: 4px
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -57,6 +44,15 @@
       margin-top: 4px
       padding: 12px 35px 12px 14px
 
+    &_room-amenities
+      margin-top: 4px
+      padding: 12px 35px 12px 14px
+      margin-bottom: -1px
+
+    &:hover, &:focus
+      border: 1px solid rgba(31, 32, 65, 0.5)
+      color: rgba(31, 32, 65, 0.75)
+
   &__expand
     position: absolute
     content: url('/img/expand-more.svg')
@@ -68,7 +64,7 @@
       top: 29px
 
   &__slider
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
     font-size: 12px
@@ -77,7 +73,7 @@
     margin-top: 10px
 
     &-label
-      font-family: Montserrat
+      font-family: Montserrat, OpenSans, sans-serif
       font-style: normal
       font-weight: bold
       font-size: 12px;
@@ -90,10 +86,13 @@
 
     &-text
       display: block
-      margin-top: 43px
+      margin-top: 14px
+
+  &__slider-double
+    margin-top: 23px
 
   &__check-but
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -126,12 +125,42 @@
     border: 1px solid rgba(31, 32, 65, 0.25)
     box-sizing: border-box
     border-radius: 4px
-    width: 30px
-    height: 30px
+    width: 0px
+    height: 0px
     position: absolute
     top: -9px
     left: -9px
     cursor: pointer
+    opacity: 0
 
-    &:checked
+    &_checkmark
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 20px
+      height: 20px
+      border: 1px solid rgba(31, 32, 65, 0.25)
+      box-sizing: border-box
+      border-radius: 4px
+
+      &:after
+        content: ""
+        position: absolute
+        display: none
+        left: 6px
+        top: 4px
+        width: 4px
+        height: 6px
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+        border: solid #8BA4F9
+        border-width: 0 2px 2px 0
+
+    &:checked + .search-room__checkbox_checkmark
       border: 1px solid #BC9CFF
+
+      &:after
+        display: block
+
+  &__added-convenience
+    margin-top: 29px

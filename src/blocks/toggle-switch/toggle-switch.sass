@@ -14,6 +14,12 @@
       -ms-transform: translateX(18px)
       transform: translateX(18px)
 
+    &:checked + .toggle-switch__slider
+      border: 1px solid #8BA4F9
+
+    &:checked + .toggle-switch__slider:before
+      background-color: #8BA4F9
+
   &__slider
     position: absolute
     cursor: pointer

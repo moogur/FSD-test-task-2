@@ -58,13 +58,33 @@ const settings = {
     new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
     new CopyPlugin([{ from: './src/img', to: './img' }, { from: './src/fonts', to: './fonts' }])
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          name: 'lib',
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          chunks: 'initial'
+        },
+        common: {
+          name: 'chunk-common',
+          minChunks: 2,
+          priority: -30,
+          chunks: 'initial',
+          reuseExistingChunk: true
+        }
+      }
+    }
+  },
   devtool: NODE_ENV === 'development' ? 'cheap-eval-source-map' : false,
   devServer: {
     contentBase: '/',
     overlay: true,
     compress: true,
     historyApiFallback: true,
-    port: 3000
+    port: 3000,
+    host: '192.168.1.101'
   }
 };
 

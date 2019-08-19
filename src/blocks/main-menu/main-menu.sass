@@ -7,7 +7,7 @@
 
     &__item
       display: inline
-      font-family: Montserrat
+      font-family: Montserrat, OpenSans, sans-serif
       font-style: normal
       font-weight: normal
       font-size: 0.875rem
@@ -26,7 +26,7 @@
 
     &__link
       text-decoration: none
-      font-family: Montserrat
+      font-family: Montserrat, OpenSans, sans-serif
       font-style: normal
       font-weight: bold
       font-size: 0.75rem
@@ -38,11 +38,18 @@
       border-radius: 22px
       padding: 9px 18px 5px 18px
 
+      &:hover
+        border: 2px solid rgba(188,156,255, 0.5)
+
       &_blue
-        border: 0px
+        border: none
         padding: 11px 20px 6px 20px
         color: #ffffff
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+        &:hover
+          opacity: 0.5
+          border: none
 
       &:first-child
         margin-right: 20px

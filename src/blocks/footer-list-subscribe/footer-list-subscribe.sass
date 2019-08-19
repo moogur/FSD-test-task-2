@@ -11,7 +11,7 @@
     line-height: 24px
     color: rgba(31, 32, 65, 0.5)
     text-transform: none
-    font-family: Montserrat;
+    font-family: Montserrat, OpenSans, sans-serif
     cursor: pointer
     position: relative
 
@@ -20,7 +20,7 @@
       border: 1px solid rgba(31, 32, 65, 0.25)
       box-sizing: border-box
       border-radius: 4px
-      font-family: Montserrat
+      font-family: Montserrat, OpenSans, sans-serif
       font-style: normal
       font-weight: normal
       font-size: 14px
@@ -29,6 +29,10 @@
       width: 100%
       margin-top: 6px
       padding: 9px 40px 10px 14px
+
+      &:hover, &:focus
+        border: 1px solid rgba(31, 32, 65, 0.5)
+        color: rgba(31, 32, 65, 0.75)
 
     &-arrow
       position: absolute

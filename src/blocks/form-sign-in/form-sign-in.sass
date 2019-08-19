@@ -11,7 +11,7 @@
 
   &__header
     text-align: start
-    font-family: Quicksand
+    font-family: Quicksand, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 24px
@@ -25,7 +25,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25)
     box-sizing: border-box
     border-radius: 4px
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -39,11 +39,15 @@
     &_margin-10
       margin-top: 10px
 
+    &:hover, &:focus
+      border: 1px solid rgba(31, 32, 65, 0.5)
+      color: rgba(31, 32, 65, 0.75)
+
   &__switch
     margin-top: 7px
 
   &__label
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -61,7 +65,7 @@
     margin-top: 6px
 
     &-label
-      font-family: Montserrat
+      font-family: Montserrat, OpenSans, sans-serif
       font-style: normal
       font-weight: normal
       font-size: 14px
@@ -78,7 +82,7 @@
     width: 100%
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
     border-radius: 22px
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -90,6 +94,9 @@
     box-sizing: border-box
     cursor: pointer
 
+    &:hover
+      opacity: 0.5
+
   &__arrow
     position: absolute
     content: url('/img/arrow-forward-white.svg')
@@ -97,7 +104,7 @@
     right: 10px
 
   &__text
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -110,7 +117,7 @@
   &__create
     margin: 30px 0 31px 0
     border-radius: 22px
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -122,3 +129,6 @@
     padding: 12px 24px 12px 23px
     float: right
     cursor: pointer
+
+    &:hover
+      border: 2px solid rgba(188,156,255, 0.5)

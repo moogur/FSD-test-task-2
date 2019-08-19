@@ -1,0 +1,19 @@
+- const LIST = [
+-  {title: "Завтрак", checked: false},
+-  {title: "Письменный стол", checked: true},
+-  {title: "Стул для кормления", checked: true},
+-  {title: "Кроватка", checked: true},
+-  {title: "Телевизор", checked: false},
+-  {title: "Шампунь", checked: false},
+-  {title: "Телевизор", checked: false},
+-  {title: "Шампунь", checked: false}
+-]
+
+section.added-convenience
+  span.added-convenience__header дополнительные удобства
+  span.added-convenience__expand
+  div.added-convenience__list-items
+    each val in LIST
+      label.added-convenience__item-label #{val.title}
+        input.added-convenience__item-check(type="checkbox", checked=val.checked)
+        span.added-convenience__item-check_checkmark

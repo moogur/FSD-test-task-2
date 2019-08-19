@@ -3,6 +3,11 @@ import 'reset-css';
 import './sass/fonts.sass';
 import './sass/global.sass';
 
+// Api
+import './api/slider';
+import './api/dropdown';
+import './api/calendar';
+
 // Index page
 import './blocks/header';
 import './blocks/form-find-room';

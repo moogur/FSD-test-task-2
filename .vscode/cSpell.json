@@ -14,7 +14,12 @@
     "maxBOF",
     "img",
     "tabindex",
-    "ГГГГ"
+    "ГГГГ",
+    "cnt",
+    "Cnt",
+    "num",
+    "btn",
+    "clazz"
   ],
   "ignorePaths": [
     "node_modules",

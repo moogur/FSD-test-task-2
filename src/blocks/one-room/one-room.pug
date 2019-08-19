@@ -1,6 +1,18 @@
 mixin one-room(data)
-  each ind, item in data
-    article.one-room
-      div.one-room__image
-        img(src="/img/room-" + ind + ".jpg", alt="image room number" + ind)
-      span.one-room__number № #{ind}
+  article.one-room
+    div.one-room__image
+      img(src="/img/room-" + data.number + ".jpg", alt="image room number" + data.number)
+    div.one-room__description
+      span.one-room__description-number_icon №
+      span.one-room__description-number #{data.number}
+      if data.lux
+        span.one-room__description-lux люкс
+      span.one-room__description-price #{data.price}₽ в сутки
+    div.one-room__line
+    div.one-room__comments
+      each val in [1, 2, 3, 4, 5]
+        if val <= data.stars
+          span.one-room__comments-rating.one-room__comments-rating_plus
+        else
+          span.one-room__comments-rating.one-room__comments-rating_minus
+      span.one-room__comments-number #{data.comments} Отзывов

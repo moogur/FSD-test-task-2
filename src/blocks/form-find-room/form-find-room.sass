@@ -8,16 +8,15 @@
   max-width: 380px
 
   &__header
-    font-family: Quicksand
+    font-family: Quicksand, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 24px
     line-height: 30px
     color: #1F2041
-    letter-spacing: 2.5px
 
   &__item-label
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -40,7 +39,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25)
     box-sizing: border-box
     border-radius: 4px
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -57,6 +56,10 @@
       padding-top: 12px
       padding-bottom: 12px
 
+    &:hover, &:focus
+      border: 1px solid rgba(31, 32, 65, 0.5)
+      color: rgba(31, 32, 65, 0.75)
+
   &__item-expand
     position: absolute
     content: url('/img/expand-more.svg')
@@ -69,7 +72,7 @@
     cursor: pointer
 
   &__item-submit
-    font-family: Montserrat
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
     font-size: 12px
@@ -84,6 +87,9 @@
     width: 100%
     display: block
     text-decoration: none
+
+    &:hover
+      opacity: 0.5
 
   &__item-arrow
     content: url("/img/arrow-forward-white.svg")

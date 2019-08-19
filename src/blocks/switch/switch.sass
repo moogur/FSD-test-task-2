@@ -1,24 +1,8 @@
 .switch
 
-  &__input
-    -moz-appearance: none
-    -webkit-appearance: none
-    appearance: none
-    background: #FFFFFF
-    border: 1px solid rgba(31, 32, 65, 0.25)
-    box-sizing: border-box
-    border-radius: 10px
-    width: 20px
-    height: 20px
-    margin-left: 0px
-    cursor: pointer
-    margin-right: 11px
-
-    &:checked
-      border: 1px solid #BC9CFF
-
   &__label
-    font-family: Montserrat
+    position: relative
+    font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -37,3 +21,34 @@
       content: "Женщина"
       position: relative
       bottom: 6px
+
+  &__radio
+    -moz-appearance: none
+    -webkit-appearance: none
+    appearance: none
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 10px
+    width: 20px
+    height: 20px
+    margin-left: 0px
+    cursor: pointer
+    margin-right: 11px
+
+    &:checked
+      border: 1px solid #BC9CFF
+
+    &:checked + .switch__radio_radiomark
+      display: block
+
+    &_radiomark
+      position: absolute
+      width: 12px
+      height: 12px
+      left: 4px
+      top: 7px
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      border-radius: 10px
+      display: none
+
