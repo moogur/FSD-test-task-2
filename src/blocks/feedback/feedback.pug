@@ -1,0 +1,18 @@
+- const feedback = [
+- {title: "Мурад Сарафанов", ago: "5 дней назад", imgSrc: "feedback-one.jpg", feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},
+- {title: "Патрисия Стёклышкова", ago: "Неделю назад", imgSrc: "feedback-two.jpg", feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"}
+- ]
+
+section.feedback
+  span.feedback__number 2 отзыва
+  h3.feedback__header Отзывы посетителей номера
+  each item in feedback
+    div.feedback__block
+      div.feedback__block-image
+        img(src="/img/" + item.imgSrc)
+      h4.feedback.feedback__block-header #{item.title}
+      span.feedback__block-text #{item.ago}
+    div.feedback__block-favorite
+      span.feedback__block-favorite_img
+      span.feedback__block-favorite_number
+    div.feedback__text #{item.feedback}

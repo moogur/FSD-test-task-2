@@ -1,0 +1,89 @@
+.feedback
+  width: 710px
+  clear: both
+
+  &__header
+    font-family: OpenSans, Quicksand, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 19px
+    line-height: 18px
+    color: #1F2041
+
+  &__number
+    display: inline-block
+    float: right
+    font-family: Montserrat, OpenSans, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 14px
+    color: rgba(31, 32, 65, 0.5)
+    margin-top: 5px
+
+  &__block
+    margin: 24px 0 10px 0
+
+    &-image
+      float: left
+
+    &-header
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 24px
+      color: rgba(31, 32, 65, 0.75)
+      padding-left: 9px
+      display: inline
+
+    &-text
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 24px
+      color: rgba(31, 32, 65, 0.5)
+      padding-left: 57px
+      display: block
+
+
+  &__block-favorite
+    margin-left: 4px
+    float: left
+    padding-top: 2px
+
+    &_img
+      border: 1px solid #BC9CFF
+      border-radius: 50% 0 0 50%
+      display: inline-block
+      width: 18px
+      height: 18px
+      border-right: none
+
+      &_img:after
+        content: url('/img/favorite.svg')
+
+    &_number
+      border: 1px solid #BC9CFF
+      border-radius: 0 50% 50% 0
+      display: inline-block
+      width: 18px
+      height: 18px
+      border-left: none
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 10px
+      line-height: 12px
+      color: #BC9CFF
+
+  &__text
+    font-family: Montserrat, OpenSans, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: rgba(31, 32, 65, 0.75)
+    max-width: 653px
+    padding-left: 57px

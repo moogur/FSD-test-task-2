@@ -1,0 +1,1 @@
+import './rules-room.sass';

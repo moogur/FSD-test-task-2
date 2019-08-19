@@ -2,10 +2,31 @@ include ../one-room/one-room
 
 - const ROOMS = [
 -  {number: 888, lux: true, price: "9 990", stars: 5, comments: 145},
--  {number: 840, lux: false, price: "9 990", stars: 4, comments: 65}
+-  {number: 840, lux: false, price: "9 900", stars: 4, comments: 65},
+-  {number: 980, lux: true, price: "8 500", stars: 3, comments: 35},
+-  {number: 856, lux: false, price: "7 300", stars: 5, comments: 19},
+-  {number: 740, lux: false, price: "6 000", stars: 4, comments: 44},
+-  {number: 982, lux: false, price: "5 800", stars: 3, comments: 56},
+-  {number: 678, lux: false, price: "5 500", stars: 5, comments: 45},
+-  {number: 450, lux: false, price: "5 300", stars: 4, comments: 39},
+-  {number: 350, lux: false, price: "5 000", stars: 3, comments: 77},
+-  {number: 666, lux: false, price: "5 000", stars: 5, comments: 25},
+-  {number: 444, lux: false, price: "5 000", stars: 3, comments: 15},
+-  {number: 352, lux: false, price: "5 000", stars: 3, comments: 55}
 -]
 
-article.list_numbers
-  h2.list_numbers__header Номера, которые мы для вас подобрали
-  each item in ROOMS
-    +one-room(item)
+article.list-numbers
+  h2.list-numbers__header Номера, которые мы для вас подобрали
+  div.list-numbers__container
+    each item, ind in ROOMS
+      if ind < 3
+        - item.classText = "one-room__text_row-1"
+      if ind > 2
+        - item.class = "one-room_row-2"
+      if ind > 5
+        - item.class = "one-room_row-3"
+      if ind > 8
+        - item.class = "one-room_row-4"
+        - item.classText = "one-room__text_row-4"
+      +one-room(item)
+  include ../pagination/pagination

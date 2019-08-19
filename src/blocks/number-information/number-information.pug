@@ -1,0 +1,16 @@
+- const LIST = [
+-  {title: "Комфорт", text: "Шумопоглощающие стены", imgClass: "emoticon"},
+-  {title: "Удобство", text: "Окно в каждой из спален", imgClass: "location"},
+-  {title: "Уют", text: "Номер оснащён камином", imgClass: "whatshot"},
+-]
+- const len = LIST.length - 1
+
+section.number-information
+  h3.number-information__header Сведения о номере
+  each item, val in LIST
+    div.number-information__information-block
+      span.number-information__information-block-image(class="number-information__information-block-image_" + item.imgClass)
+      h4.number-information__information-block-header #{item.title}
+      span.number-information__information-block-text #{item.text}
+    if val !== len
+      div.number-information__line

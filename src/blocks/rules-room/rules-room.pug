@@ -1,0 +1,13 @@
+- const rules = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
+
+section.rules-room
+  div.rules-room__block-rules
+    h3.rules-room__header.rules-room__header_list Правила
+    ul.rules-room__list
+      each item in rules
+        li.rules-room__list-item
+          span.rules-room__list-item_circle
+          span.rules-room__list-item_text #{item}
+  div.rules-room__block-cancel
+    h3.rules-room__header Отмена
+    p.rules-room__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

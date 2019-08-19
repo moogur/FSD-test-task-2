@@ -21,3 +21,6 @@ import './blocks/form-sign-in';
 // Search-room page
 import './blocks/search-room-aside';
 import './blocks/list-numbers';
+
+// Room-details page
+import './blocks/room-details-main';

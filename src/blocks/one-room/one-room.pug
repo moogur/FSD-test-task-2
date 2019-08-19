@@ -1,13 +1,23 @@
 mixin one-room(data)
-  article.one-room
+  article.one-room(class=data.class)
     div.one-room__image
-      img(src="/img/room-" + data.number + ".jpg", alt="image room number" + data.number)
+      a(href="/room-details.html")
+        img(src="/img/room-" + data.number + ".jpg", alt="image room number" + data.number)
+      span.one-room__image_prev
+      div.one-room__image_background.one-room__image_background-left
+      span.one-room__image_next
+      div.one-room__image_background.one-room__image_background-right
+      span.one-room__image_circle.one-room__image_circle-one.one-room__image_circle-active
+      span.one-room__image_circle.one-room__image_circle-two
+      span.one-room__image_circle.one-room__image_circle-three
+      span.one-room__image_circle
     div.one-room__description
       span.one-room__description-number_icon №
       span.one-room__description-number #{data.number}
       if data.lux
         span.one-room__description-lux люкс
-      span.one-room__description-price #{data.price}₽ в сутки
+      span.one-room__text(class=data.classText) в сутки
+      span.one-room__description-price #{data.price}₽
     div.one-room__line
     div.one-room__comments
       each val in [1, 2, 3, 4, 5]
@@ -15,4 +25,5 @@ mixin one-room(data)
           span.one-room__comments-rating.one-room__comments-rating_plus
         else
           span.one-room__comments-rating.one-room__comments-rating_minus
-      span.one-room__comments-number #{data.comments} Отзывов
+      span.one-room__text.one-room__text_comment Отзывов
+      span.one-room__comments-number #{data.comments}
