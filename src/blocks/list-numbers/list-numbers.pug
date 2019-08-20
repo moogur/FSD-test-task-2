@@ -25,8 +25,11 @@ article.list-numbers
         - item.class = "one-room_row-2"
       if ind > 5
         - item.class = "one-room_row-3"
+        - item.classText = "one-room__text_row-4"
+        - item.classComment = "one-room__text_comment_row-3-4-margin-top"
       if ind > 8
         - item.class = "one-room_row-4"
         - item.classText = "one-room__text_row-4"
+        - item.classComment = "one-room__text_comment_row-3-4-margin-top"
       +one-room(item)
   include ../pagination/pagination

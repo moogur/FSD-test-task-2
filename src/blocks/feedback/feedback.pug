@@ -1,6 +1,6 @@
 - const feedback = [
-- {title: "Мурад Сарафанов", ago: "5 дней назад", imgSrc: "feedback-one.jpg", feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},
-- {title: "Патрисия Стёклышкова", ago: "Неделю назад", imgSrc: "feedback-two.jpg", feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"}
+- {title: "Мурад Сарафанов", ago: "5 дней назад", imgSrc: "feedback-one.jpg", feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", cnt: "12", active: true},
+- {title: "Патрисия Стёклышкова", ago: "Неделю назад", imgSrc: "feedback-two.jpg", feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", cnt: "2", active: false}
 - ]
 
 section.feedback
@@ -13,6 +13,10 @@ section.feedback
       h4.feedback.feedback__block-header #{item.title}
       span.feedback__block-text #{item.ago}
     div.feedback__block-favorite
-      span.feedback__block-favorite_img
-      span.feedback__block-favorite_number
+      if item.active
+        div.feedback__block-favorite_left.feedback__block-favorite_left_active
+        div.feedback__block-favorite_right.feedback__block-favorite_right_active #{item.cnt}
+      else
+        div.feedback__block-favorite_left
+        div.feedback__block-favorite_right #{item.cnt}
     div.feedback__text #{item.feedback}

@@ -1,11 +1,14 @@
+- const findRoom = [
+-   {text: "прибытие", type: "text", tabindex: "1", placeholder: "ДД.ММ.ГГГГ"},
+-   {text: "выезд", type: "text", tabindex: "2", placeholder: "ДД.ММ.ГГГГ"}
+-]
+
 form.find-room
   h2.find-room__header Найдём номера под ваши пожелания
-  label.find-room__item-label.find-room__item-label_width-150 прибытие
-    input.find-room__item-input(type="text", tabindex="1", placeholder="ДД.ММ.ГГГГ")
-    span.find-room__item-expand
-  label.find-room__item-label.find-room__item-label_width-150.find-room__item-label_right выезд
-    input.find-room__item-input(type="text", tabindex="2", placeholder="ДД.ММ.ГГГГ")
-    span.find-room__item-expand
+  each item in findRoom
+    label.find-room__item-label.find-room__item-label_width-150 #{item.text}
+      input.find-room__item-input(type=item.type, tabindex=item.tabindex, placeholder=item.placeholder)
+      span.find-room__item-expand
   label.find-room__item-label гости
     input.find-room__item-input.find-room__item-input_guest.js-input-guest(type="text", tabindex="3", placeholder="Сколько гостей")
     span.find-room__item-expand

@@ -1,4 +1,5 @@
+- const social = ["twitter", "facebook", "instagram"]
+
 section.social
-  i.social__twitter
-  i.social__facebook
-  i.social__instagram
+  each item in social
+    i(class="social__" + item)

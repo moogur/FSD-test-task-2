@@ -1,7 +1,10 @@
+- const switchBlock = [
+-   {checked: "checked", clazz: "man"},
+-   {checked: "", clazz: "woman"}
+- ]
+
 article.switch
-  label.switch__label.switch__label_man
-    input.switch__radio(type="radio", name="sex", checked)
-    span.switch__radio_radiomark
-  label.switch__label.switch__label_woman
-    input.switch__radio(type="radio", name="sex")
-    span.switch__radio_radiomark
+  each item in switchBlock
+    label.switch__label(class="switch__label_" + item.clazz)
+      input.switch__radio(type="radio", name="sex", checked=item.checked)
+      span.switch__radio_radiomark

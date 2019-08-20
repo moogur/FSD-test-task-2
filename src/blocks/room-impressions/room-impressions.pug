@@ -1,9 +1,19 @@
+- const roomImpressions = [
+-   {title: "Великолепно", clazz: "great"},
+-   {title: "Хорошо", clazz: "good"},
+-   {title: "Удовлетворительно", clazz: "satisfactory",},
+-   {title: "Разочарован", clazz: "disappointed"}
+- ]
+
 section.room-impressions
   h3.room-impressions__header Впечатления от номера
-  div.room-impressions__container
-    div.room-impressions__container.room-impressions__container_left
-      div.room-impressions__circle.room-impressions__circle_top-left
-      div.room-impressions__circle.room-impressions__circle_bottom-left
-    div.room-impressions__container.room-impressions__container_right
+  div.room-impressions__circle-container
+    div.room-impressions__circle.room-impressions__circle_top-left
+    div.room-impressions__circle_right
       div.room-impressions__circle.room-impressions__circle_top-right
       div.room-impressions__circle.room-impressions__circle_bottom-right
+    p.room-impressions__circle-text-cnt 260
+    p.room-impressions__circle-text-voice голосов
+  ul.room-impressions__list
+    each item in roomImpressions
+      li.room-impressions__list-item(class="room-impressions__list-item_" + item.clazz) #{item.title}

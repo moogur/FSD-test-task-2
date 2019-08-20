@@ -1,0 +1,42 @@
+- const detailsRoom = [
+-   {text: "прибытие", type: "text", tabindex: "1", placeholder: "19.08.2019"},
+-   {text: "выезд", type: "text", tabindex: "2", placeholder: "23.08.2019"}
+-]
+- const detailRoomList = [
+-   {text: "9 990₽ х 4 суток", price: "39 960₽"},
+-   {text: " Сбор за услуги: скидка 2 179₽", price: "0₽"},
+-   {text: "Сбор за дополнительные услуги", price: "300₽"}
+-]
+- const detailRoomListLen = detailRoomList.length - 1
+
+form.room-details
+  div.room-details__description
+    span.room-details__description-number_icon №
+    span.room-details__description-number 888
+    span.room-details__description-lux люкс
+    span.room-details__text в сутки
+    span.room-details__description-price 9 990₽
+  each item in detailsRoom
+    label.room-details__label.room-details__label_width-150 #{item.text}
+      input.room-details__input(type=item.type, tabindex=item.tabindex, placeholder=item.placeholder)
+      span.room-details__expand
+  label.room-details__label гости
+    input.room-details__input.room-details__input_guest(type="text", tabindex="3", placeholder="3 гостя")
+    span.room-details__expand
+  ul.room-details__list
+    each item, ind in detailRoomList
+      li.room-details__list-item
+        if ind === detailRoomListLen
+          span.room-details__list-item-text.room-details__list-item-text_max-width.room-details__list-item-text_line-height #{item.text}
+        else
+          span.room-details__list-item-text.room-details__list-item-text_max-width #{item.text}
+        if ind !== 0
+          span.room-details__list-item-text.room-details__list-item-text_icon i
+        span.room-details__list-item-text.room-details__list-item-text_right #{item.price}
+  div.room-details__container
+    span.room-details__total.room-details__total_text Итого
+    span.room-details__total.room-details__total_price 38 081₽
+    span.room-details__total_point ...........................................................................................................
+  div.room-details__container
+    a.room-details__submit(tabindex="10") забронировать
+    span.room-details__arrow

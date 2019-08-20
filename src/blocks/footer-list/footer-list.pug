@@ -1,11 +1,25 @@
+- const navigation = ["О нас", "Новости", "Служба поддержки", "Услуги"]
+- const aboutUs = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+- const support = ["Соглашения", "Сообщества", "Связь с нами"]
+- const footerList = [
+-  {name: "навигация", clazz: "_navigation", content: navigation},
+-  {name: "о нас", clazz: "_about-us", content: aboutUs},
+-  {name: "Служба поддержки", clazz: "_support", content: support},
+-]
+
 ul.footer-list
   li.footer-list__item.footer-list__item_logo
-    include ../footer-logo/footer-logo
-  li.footer-list__item.footer-list__item_navigation навигация
-    include ../footer-list-navigation/footer-list-navigation
-  li.footer-list__item.footer-list__item_about-us о нас
-    include ../footer-list-about-us/footer-list-about-us
-  li.footer-list__item.footer-list__item_support Служба поддержки
-    include ../footer-list-support/footer-list-support
+    include ../logo/logo
+    p.footer-list__item_logo-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+  each item in footerList
+    li.footer-list__item(class="footer-list__item" + item.clazz) #{item.name}
+      ul
+        each val in item.content
+          li.footer-list__item-subtitle #{val}
   li.footer-list__item.footer-list__item_subscription Подписка
-    include ../footer-list-subscribe/footer-list-subscribe
+    ul.footer-list-subscribe
+      li.footer-list__item-subtitle.footer-list__item-subtitle_subscribe Получайте специальные предложения и новости сервиса
+      li.footer-list__item-subtitle.footer-list__item-subtitle_email
+        form.footer-list__form
+          input.footer-list__form-email(type="email", placeholder="Email")
+          span.footer-list__form-arrow

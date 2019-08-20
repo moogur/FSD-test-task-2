@@ -1,11 +1,13 @@
-main.room-details
-  div.room-details__main-image
+main.room-details-main
+  div.room-details-mains__main-image
     img(src="/img/room-details-image-main.jpg", alt="room-details-main")
-  div.room-details__additional-images
+  div.room-details-main__additional-images
     img(src="/img/room-details-image-1.jpg", alt="room-details-image-1")
     img(src="/img/room-details-image-2.jpg", alt="room-details-image-2")
-  section.room-details__information
-    include ../number-information/number-information
-    include ../room-impressions/room-impressions
-    include ../feedback/feedback
-    include ../rules-room/rules-room
+  div.room-details-main__container
+    section.room-details-main__information
+      include ../number-information/number-information
+      include ../room-impressions/room-impressions
+      include ../feedback/feedback
+      include ../rules-room/rules-room
+    include ../form-room-details/form-room-details

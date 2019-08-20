@@ -1,0 +1,222 @@
+.room-details
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  max-width: 380px
+  background: #FFFFFF
+  border: 1px solid rgba(0, 0, 0, 0.12)
+  box-sizing: border-box
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  border-radius: 4px
+  padding: 47px 29px 29px 29px
+  margin: 68px 0 0 0
+
+  &__description
+    width: 100%
+
+    &-number
+      font-family: OpenSans, Quicksand, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 23px
+      line-height: 13px
+      color: #1F2041
+      letter-spacing: 2px
+      display: inline-block
+
+      &_icon
+        font-family: Quicksand, OpenSans, sans-serif
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 13px
+        color: #1F2041
+        margin-right: 4px
+
+    &-lux
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      text-transform: uppercase
+      color: #BC9CFF
+      display: inline-block
+      margin-left: 3px
+
+    &-price
+      display: block
+      float: right
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 18px
+      color: rgba(31, 32, 65, 0.5)
+      margin-right: 4px
+      margin-top: 2px
+
+  &__text
+    display: block
+    float: right
+    font-family: Montserrat, OpenSans, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.5)
+    margin-top: 4px
+
+  &__label
+    font-family: Montserrat, OpenSans, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    color: #1F2041
+    display: inline-block
+    width: 100%
+    margin-top: 21px
+    position: relative
+
+    &_width-150
+      max-width: 150px
+      margin-top: 20px
+
+  &__input
+    background: #FFFFFF
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    font-family: Montserrat, OpenSans, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: rgba(31, 32, 65, 0.75)
+    width: 100%
+    max-width: inherit
+    display: block
+    padding: 11px 35px 13px 14px
+    margin-top: 5px
+
+    &_guest
+      margin-top: 4px
+      padding-top: 12px
+      padding-bottom: 12px
+
+    &:hover, &:focus
+      border: 1px solid rgba(31, 32, 65, 0.5)
+      color: rgba(31, 32, 65, 0.75)
+
+  &__expand
+    position: absolute
+    content: url('/img/expand-more.svg')
+    top: 31px
+    right: 10px
+    cursor: pointer
+
+  &__list
+    width: 100%
+    margin-top: 18px
+
+    &-item
+      margin-bottom: 10px
+
+      &-text
+        display: inline-block
+        font-family: Montserrat, OpenSans, sans-serif
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 24px
+        color: rgba(31, 32, 65, 0.75)
+        padding-left: 1px
+
+        &_max-width
+          max-width: 215px
+
+        &_line-height
+          line-height: 18px
+          padding-top: 3px
+
+        &_right
+          float: right
+
+        &_icon
+          text-align: center
+          line-height: 20px
+          width: 20px
+          height: 20px
+          border-radius: 50%
+          border: 1px solid rgba(31, 32, 65, 0.25)
+          box-sizing: border-box
+          font-weight: bold
+          color: rgba(31, 32, 65, 0.25)
+          margin-left: 5px
+
+          &:hover
+            color: rgba(31, 32, 65, 0.75)
+            border: 1px solid rgba(31, 32, 65, 0.75)
+            cursor: pointer
+
+  &__container
+    position: relative
+    margin-top: 20px
+    width: 100%
+
+  &__total
+    font-family: OpenSans, Quicksand, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 19px
+    line-height: 18px
+    color: #1F2041
+    display: inline-block
+
+    &_text
+      margin-top: 2px
+      margin-left: 1px
+
+    &_price
+      margin-top: 2px
+      float: right
+      margin-right: 1px
+      letter-spacing: -0.5px
+
+    &_point
+      font-family: Montserrat, OpenSans, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 8px
+      line-height: 16px
+      color: rgba(31, 32, 65, 0.25)
+      margin: 0 5px
+
+  &__submit
+    display: block
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+    font-family: Montserrat, OpenSans, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    padding: 14px 0 15px 0
+    box-sizing: border-box
+    cursor: pointer
+    padding-right: 4px
+
+    &:hover
+      opacity: 0.5
+
+  &__arrow
+    position: absolute
+    content: url('/img/arrow-forward-white.svg')
+    top: 10px
+    right: 10px
+    width: 24px

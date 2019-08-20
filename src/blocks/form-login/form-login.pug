@@ -1,7 +1,12 @@
+- const formLogin = [
+-  {type: "email", placeholder: "Email", tabindex: "1"},
+-  {type: "password", placeholder: "Пароль", tabindex: "2"}
+- ]
+
 form.form-login
   h2.form-login__header Войти
-  input.form-login__input(type="email", placeholder="Email", tabindex="1")
-  input.form-login__input.form-login__input_margin-10(type="password", placeholder="Пароль", tabindex="2")
+  each item in formLogin
+    input.form-login__input(type=item.type, placeholder=item.placeholder, tabindex=item.tabindex)
   div.form-login__container
     a.form-login__submit(tabindex="3") войти
     span.form-login__arrow

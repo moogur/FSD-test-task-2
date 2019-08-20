@@ -47,36 +47,53 @@
       padding-left: 57px
       display: block
 
-
   &__block-favorite
     margin-left: 4px
     float: left
     padding-top: 2px
+    position: relative
+    cursor: pointer
 
-    &_img
-      border: 1px solid #BC9CFF
+    &_left
+      position: absolute
+      top: 2px
+      left: 0px
+      border: 1px solid rgba(31, 32, 65, 0.25)
       border-radius: 50% 0 0 50%
       display: inline-block
-      width: 18px
-      height: 18px
+      width: 10px
+      height: 10px
+      padding: 4px
       border-right: none
+      content: url('/img/favorite-border.svg')
 
-      &_img:after
+      &_active
+        border: 1px solid #BC9CFF
+        border-right: none
         content: url('/img/favorite.svg')
 
-    &_number
-      border: 1px solid #BC9CFF
+    &_right
+      position: absolute
+      top: 2px
+      left: 19px
+      border: 1px solid rgba(31, 32, 65, 0.25)
       border-radius: 0 50% 50% 0
       display: inline-block
-      width: 18px
-      height: 18px
+      padding: 4px 9px 4px 1px
+      min-width: 10px
+      height: 10px
       border-left: none
       font-family: Montserrat, OpenSans, sans-serif
       font-style: normal
       font-weight: normal
       font-size: 10px
-      line-height: 12px
-      color: #BC9CFF
+      line-height: 10px
+      color: rgba(31, 32, 65, 0.25)
+
+      &_active
+        border: 1px solid #BC9CFF
+        border-left: none
+        color: #BC9CFF
 
   &__text
     font-family: Montserrat, OpenSans, sans-serif
