@@ -44,21 +44,24 @@
     font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: normal
-    font-size: 14px
-    line-height: 18px
+    font-size: 0.875rem
+    line-height: 1.125rem
     color: rgba(31, 32, 65, 0.75)
     width: 100%
     max-width: inherit
     display: block
     padding: 11px 35px 13px 14px
     margin-top: 5px
+    cursor: pointer
 
     &_guest
       margin-top: 4px
       padding-top: 12px
       padding-bottom: 12px
 
-    &:hover, &:focus
+    &_active
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
       border: 1px solid rgba(31, 32, 65, 0.5)
       color: rgba(31, 32, 65, 0.75)
 
@@ -78,8 +81,8 @@
     font-family: Montserrat, OpenSans, sans-serif
     font-style: normal
     font-weight: bold
-    font-size: 12px
-    line-height: 15px
+    font-size: 0.75rem
+    line-height: 0.9375rem
     text-align: center
     text-transform: uppercase
     color: #FFFFFF

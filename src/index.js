@@ -1,4 +1,4 @@
-// Global
+// Global sass
 import 'reset-css';
 import './sass/fonts.sass';
 import './sass/global.sass';

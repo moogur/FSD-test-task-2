@@ -1,11 +1,11 @@
-/* global jQuery document window $ */
+/* global jQuery document window */
 /* eslint-disable wrap-iife */
-/* eslint-disable func-names */
 // eslint-disable-next-line no-multiple-empty-lines
 
-(function ($) {
-  $.fn.rangeSlider = function () {
-    return this.each(function () {
+(function jq($) {
+  $.fn.rangeSlider = function pluginJQ(settings) {
+    const options = $.extend({}, settings);
+    return this.each(function enumeration() {
       const $root = $(this);
       const $slider = $('<section>')
         .addClass('range js-range')
@@ -19,6 +19,14 @@
       const $button2 = $('<span>')
         .addClass('range__button range__button_two js-range__button_two')
         .appendTo($slider);
+
+      const $left = $(`.${options.left}`);
+      const $right = $(`.${options.right}`);
+
+      function getStep() {
+        const stepPx = parseInt($slider.css('width'), 10) / options.max;
+        return stepPx * options.step;
+      }
 
       function getCoords(elem) {
         const $box = $(elem).offset();
@@ -39,6 +47,32 @@
         }
       }
 
+      function ifElseRight(left1, left2, leftCnt) {
+        if (left1 > left2) {
+          $left.html(`${leftCnt}₽`);
+        } else {
+          $right.html(`${leftCnt}₽`);
+        }
+      }
+
+      function ifElseLeft(left1, left2, leftCnt) {
+        if (left1 > left2) {
+          $right.html(`${leftCnt}₽`);
+        } else {
+          $left.html(`${leftCnt}₽`);
+        }
+      }
+
+      function getNewCnt(step, pageXY, shift) {
+        const space = pageXY - shift;
+        const max = space / step;
+        let x = max - (max % 1);
+        x *= options.step;
+        if (x > options.max) x = options.max;
+        if (x < options.min) x = options.min;
+        return x;
+      }
+
       function btnRangeMouse(event) {
         const clazz = /range__button_two/i.test(event.target.className);
         const sliderCoords = getCoords($slider);
@@ -47,8 +81,10 @@
         let shiftX2 = event.pageX - buttonCoords2.left;
         let shiftX1 = event.pageX - buttonCoords1.left;
         const $document = $(document);
+        const step = getStep();
 
         function btnMove(event) {
+          const leftCnt = getNewCnt(step, event.pageX, sliderCoords.left);
           if (clazz) {
             let left2 = event.pageX - shiftX2 - sliderCoords.left;
             const right2 = $slider.outerWidth() - $button2.outerWidth();
@@ -58,6 +94,7 @@
             shiftX1 = event.pageX - buttonCoords1.left;
             const left1 = event.pageX - shiftX1 - sliderCoords.left;
             ifElse(left1, left2);
+            ifElseRight(left1, left2, leftCnt);
           } else {
             let left1 = event.pageX - shiftX1 - sliderCoords.left;
             const right1 = $slider.outerWidth() - $button1.outerWidth();
@@ -67,6 +104,7 @@
             shiftX2 = event.pageX - buttonCoords2.left;
             const left2 = event.pageX - shiftX2 - sliderCoords.left;
             ifElse(left1, left2);
+            ifElseLeft(left1, left2, leftCnt);
           }
         }
 
