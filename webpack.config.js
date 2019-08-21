@@ -7,7 +7,17 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const { NODE_ENV } = process.env;
 
-const PUG_PAGES = fs.readdirSync(`${__dirname}/src/pages`).filter((fileName) => fileName.endsWith('.pug'));
+const PUG_PAGES = fs
+  .readdirSync(`${__dirname}/src/pages`)
+  .filter((fileName) => fileName.endsWith('.pug'));
+
+const IMG_DIRS = fs
+  .readdirSync(`${__dirname}/src/blocks`)
+  .filter((dirName) => fs.lstatSync(`${__dirname}/src/blocks/${dirName}`).isDirectory());
+
+const API_DIRS = fs
+  .readdirSync(`${__dirname}/src/api`)
+  .filter((dirName) => fs.lstatSync(`${__dirname}/src/api/${dirName}`).isDirectory());
 
 const JS = {
   test: /\.js$/i,
@@ -56,7 +66,16 @@ const settings = {
     })),
     new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
     new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
-    new CopyPlugin([{ from: './src/img', to: './img' }, { from: './src/fonts', to: './fonts' }])
+    new CopyPlugin([
+      { context: './src/img', from: '**/*', to: './img' },
+      { context: './src/fonts', from: '**/*', to: './fonts' },
+      ...IMG_DIRS.map((item) => {
+        return { context: `./src/blocks/${item}/img`, from: '**/*', to: './img' };
+      }),
+      ...API_DIRS.map((item) => {
+        return { context: `./src/api/${item}/img`, from: '**/*', to: './img' };
+      })
+    ])
   ],
   optimization: {
     splitChunks: {

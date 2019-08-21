@@ -4,7 +4,7 @@
 (function jq($) {
   $.fn.dropdown = function pluginJQ(settings) {
     const options = $.extend({ data: [], buttons: false, all: false }, settings);
-    return this.each(function enumeration() {
+    return this.each(() => {
       const $root = $(this);
       $root.css('position', 'relative');
       const $section = $('<section>')

@@ -33,6 +33,7 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "reset-css": "^4.0.1"
