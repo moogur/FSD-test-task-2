@@ -19,7 +19,14 @@
     "Cnt",
     "num",
     "btn",
-    "clazz"
+    "clazz",
+    "fsd",
+    "Mozjpeg",
+    "mozjpeg",
+    "",
+    "",
+    "",
+    ""
   ],
   "ignorePaths": [
     "node_modules",

@@ -3,9 +3,6 @@ import 'reset-css';
 import './sass/fonts.sass';
 import './sass/global.sass';
 
-// Data Picker
-import 'air-datepicker/dist/js/datepicker';
-import 'air-datepicker/dist/css/datepicker.css';
 // Api
 import './api/slider';
 import './api/dropdown';

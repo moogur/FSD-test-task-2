@@ -4,6 +4,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
+const imageminSvgo = require('imagemin-svgo');
 
 const { NODE_ENV } = process.env;
 
@@ -53,6 +57,23 @@ const PUG = {
   use: ['html-loader?attrs=false', 'pug-html-loader']
 };
 
+const IMAGE = {
+  test: /\.(jpeg|jpg|png|svg)$/i,
+  plugins: [
+    imageminMozjpeg({
+      progressive: true,
+      quality: 75
+    }),
+    imageminPngquant({
+      force: 256,
+      speed: 1
+    }),
+    imageminSvgo({
+      removeViewBox: false
+    })
+  ]
+};
+
 const settings = {
   entry: './src/index.js',
   output: {
@@ -67,14 +88,10 @@ const settings = {
     new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
     new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
     new CopyPlugin([
-      { context: './src/img', from: '**/*', to: './img' },
-      { context: './src/fonts', from: '**/*', to: './fonts' },
-      ...IMG_DIRS.map((item) => {
-        return { context: `./src/blocks/${item}/img`, from: '**/*', to: './img' };
-      }),
-      ...API_DIRS.map((item) => {
-        return { context: `./src/api/${item}/img`, from: '**/*', to: './img' };
-      })
+      { context: './src/img', from: '*', to: './img' },
+      { context: './src/fonts', from: '*', to: './fonts' },
+      ...IMG_DIRS.map((item) => ({ context: `./src/blocks/${item}/img`, from: '*', to: './img' })),
+      ...API_DIRS.map((item) => ({ context: `./src/api/${item}/img`, from: '*', to: './img' }))
     ])
   ],
   optimization: {
@@ -110,7 +127,11 @@ const settings = {
 module.exports = (env, { mode }) => {
   switch (mode) {
   case 'production': {
-    const plugins = [...settings.plugins, new CleanWebpackPlugin(['./dist/'])];
+    const plugins = [
+      ...settings.plugins,
+      new CleanWebpackPlugin(['./dist/']),
+      new ImageminPlugin(IMAGE)
+    ];
     return { ...settings, plugins };
   }
   case 'development': {
