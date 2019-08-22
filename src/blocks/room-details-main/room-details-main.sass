@@ -1,13 +1,36 @@
+@import '~grid'
+
 .room-details-main
   display: flex
   flex-wrap: wrap
   align-items: flex-start
   justify-content: center
 
-  &__additional-images img
-    display: block
+  &__main-image img
+    +xxxl('width', 100%)
+
+  &__additional-images
+    +xxxl('display', inherit)
+    +xxxl('margin-top', 20px)
+    +xxxl('margin-bottom', 25px)
+
+    img
+      +xxxl('display', inline-block)
+      +xxxl('width', 100%)
+      display: block
+
+    &_img-2
+      +xxxl('margin-top', 0px)
+      margin-top: -1px
 
   &__information
+    +xxl('float', none)
+    +xxl('padding-right', 0px)
+    +md('text-align', center)
+    +md('padding-top', 0px)
     padding: 70px 70px 62px 0px
     max-width: 780px
     float: left
+
+  &__container
+    +lg('padding', 0 20px)

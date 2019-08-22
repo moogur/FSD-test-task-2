@@ -1,4 +1,21 @@
+@import '~grid'
+
 .one-room
+  +size-xxl(4)
+  +to(1250px)
+    +size(5)
+    max-width: none
+  +size-lg(6)
+  +to(840px)
+    +size(7)
+  +size-md(8)
+  +to(670px)
+    +size(9)
+  +to(580px)
+    +size(10)
+  +size-sm(11)
+  +to(480px)
+    +size(12)
   margin-bottom: 19px
   max-width: 270px
   background: #FFFFFF
@@ -18,6 +35,9 @@
 
   &__image
     position: relative
+
+    & img
+      +xxl('width', 100%)
 
     &:hover .one-room__image_prev,
     &:hover .one-room__image_background,

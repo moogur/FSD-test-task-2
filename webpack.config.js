@@ -46,10 +46,15 @@ const SASS = {
   use: [{
     loader: MiniCssExtractPlugin.loader,
     options: { hmr: NODE_ENV === 'development' }
-  },
-  { loader: 'css-loader' },
-  { loader: 'sass-loader', options: { outputStyle: NODE_ENV === 'development' ? 'expanded' : 'compressed' } }
-  ]
+  }, {
+    loader: 'css-loader'
+  }, {
+    loader: 'sass-loader',
+    options: {
+      outputStyle: NODE_ENV === 'development' ? 'expanded' : 'compressed',
+      includePaths: [`${__dirname}/src/sass`]
+    }
+  }]
 };
 
 const PUG = {
@@ -94,6 +99,11 @@ const settings = {
       ...API_DIRS.map((item) => ({ context: `./src/api/${item}/img`, from: '*', to: './img' }))
     ])
   ],
+  resolve: {
+    alias: {
+      '~grid': `${__dirname}/src/sass/smartgrid.sass`
+    }
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {

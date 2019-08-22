@@ -30,8 +30,10 @@ form.room-details
           span.room-details__list-item-text.room-details__list-item-text_max-width.room-details__list-item-text_line-height #{item.text}
         else
           span.room-details__list-item-text.room-details__list-item-text_max-width #{item.text}
-        if ind !== 0
+        if ind === 1
           span.room-details__list-item-text.room-details__list-item-text_icon i
+        if ind === 2
+          span.room-details__list-item-text.room-details__list-item-text_icon.room-details__list-item-text_icon-vertical-align i
         span.room-details__list-item-text.room-details__list-item-text_right #{item.price}
   div.room-details__container
     span.room-details__total.room-details__total_text Итого

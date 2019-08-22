@@ -1,3 +1,5 @@
+@import '~grid'
+
 .main-menu
   display: inline-block
   line-height: 70px
@@ -23,6 +25,19 @@
 
       &_margin-left-20
         margin-left: 20px
+
+      &_none-992px
+        +lg('display', none)
+
+      &_none-768px
+        +md('display', none)
+
+      &_buttons-icon
+        +md('display', inline)
+        display: none
+        content: url('/img/group-solid.svg')
+        width: 32px
+        vertical-align: middle
 
     &__link
       text-decoration: none

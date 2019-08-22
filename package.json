@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --mode development --open --inline --hot",
     "prod": "NODE_ENV=production webpack --mode production",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "smartgrid": "node smartgrid-config.js"
   },
   "author": "Alexey Dvoretsky",
   "devDependencies": {
@@ -17,7 +18,7 @@
     "clean-webpack-plugin": "=1.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "gh-pages": "^2.1.1",
@@ -31,9 +32,10 @@
     "node-sass": "^4.12.0",
     "pug": "^2.0.4",
     "pug-html-loader": "^1.1.5",
-    "sass-loader": "^7.2.0",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
+    "sass-loader": "^7.3.1",
+    "smart-grid": "^2.1.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {

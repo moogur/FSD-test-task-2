@@ -1,5 +1,9 @@
+@import '~grid'
+
 .search-room
-  max-width: 266px
+  +size-xxl(2.8)
+  +lg('display', none)
+  +xl('min-width', 210px)
   padding-top: 10px
 
   &__label
@@ -59,7 +63,7 @@
   &__expand
     position: absolute
     content: url('/img/expand-more.svg')
-    top: 31px
+    bottom: 30px
     right: 10px
     cursor: pointer
 
@@ -98,6 +102,8 @@
       margin: 0 3px
 
     &-text
+      +xxl('width', auto)
+      width: 266px
       display: block
       margin-top: 14px
 
@@ -130,6 +136,7 @@
       margin-top: 7px
 
     &_width
+      +xl('width', auto)
       width: 225px
 
   &__checkbox

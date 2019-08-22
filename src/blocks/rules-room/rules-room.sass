@@ -1,16 +1,26 @@
+@import '~grid'
+
 .rules-room
+  +md('text-align', start)
   margin-top: 34px
 
   &__block-rules
+    +md('float', none)
+    +md('margin', 0 auto 20px auto)
     max-width: 260px
     float: left
 
   &__block-cancel
+    +xxl('margin-bottom', 50px)
+    +md('float', none)
+    +md('margin', 0 auto)
+    +md('margin-bottom', 0)
     max-width: 340px
     float: left
     margin-left: 101px
 
   &__header
+    +md('text-align', center)
     font-family: OpenSans, Quicksand, sans-serif
     font-style: normal
     font-weight: bold

@@ -1,6 +1,12 @@
+// Grid system
+@import '~grid'
+
 .container
-  max-width: 1440px
-  margin: 0 auto
+  +container()
+
+.debug
+  +debug(rgba(0, 0, 0, 0.2), 1px solid #ffff00)
+  z-index: 9999
 
 // index.pug
 .header-index-page
@@ -10,10 +16,15 @@
   min-height: 900px
 
 .index-page-form-find-room
-  position: relative
+  +size-md(8)
+  +md('padding-left', 0px)
+  +md('margin', 0 auto)
+  +size-sm(10)
   padding: 70px 0 0 140px
 
 .footer-index-page
+  +md('padding-top', 60px)
+  +sm('padding-top', 30px)
   padding-top: 90px
 
 // Login page
@@ -23,10 +34,15 @@
   min-height: 753px
 
   &__form-login
+    +size-md(8)
+    +md('margin', 163px auto 0 auto)
+    +size-sm(10)
     text-align: center
     margin-top: 163px
 
 .footer-login-page
+  +md('padding-top', 60px)
+  +sm('padding-top', 30px)
   padding-top: 91px
 
 // Sign-in page
@@ -36,10 +52,15 @@
   min-height: 772px
 
   &__form-sign-in
+    +size-md(8)
+    +md('margin', 30px auto 0 auto)
+    +size-sm(10)
     text-align: center
     margin-top: 30px
 
 .footer-sign-in-page
+  +md('padding-top', 60px)
+  +sm('padding-top', 30px)
   padding-top: 89px
 
 // Search-room page
@@ -51,10 +72,14 @@
   margin: 0 auto
 
 .footer-search-room-page
+  +md('padding-top', 60px)
+  +sm('padding-top', 30px)
   padding-top: 92px
 
 // Room details page
 .footer-room-details-page
+  +md('padding-top', 60px)
+  +sm('padding-top', 30px)
   padding-top: 90px
 
 .room-page-line

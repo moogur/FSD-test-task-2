@@ -1,7 +1,55 @@
+@import '~grid'
+
 .list-numbers
-  flex-grow: 1
+  +xl('margin-left', 55px)
+  +lg('margin-left', 0)
   padding-top: 10px
   margin-left: 60px
+
+  &__filter
+    +size-lg(6)
+    +to(840px)
+      +size(7)
+    +size-md(8)
+    +to(670px)
+      +size(9)
+    +to(580px)
+      +size(10)
+    +size-sm(11)
+    +to(480px)
+      +size(12)
+    display: none
+    width: 100%
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 22px
+    font-family: Montserrat, OpenSans, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 0.75rem
+    line-height: 0.9375rem
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    padding: 14px 0 15px 0
+    text-align: center
+    box-sizing: border-box
+    cursor: pointer
+    margin: 0 auto 30px auto
+    border: none
+
+    &_block-992px
+      +lg('display', block)
+
+    &:hover
+      opacity: 0.5
+
+  &__arrow
+    position: absolute
+    content: url('/img/arrow-forward-white.svg')
+    top: 10px
+    right: 10px
+    width: 24px
+
 
   &__header
     font-family: Quicksand, OpenSans, sans-serif
@@ -12,6 +60,7 @@
     color: #1F2041
 
   &__container
+    +xxl('justify-content', space-around)
     display: flex
     justify-content: space-between
     flex-wrap: wrap

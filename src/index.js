@@ -2,6 +2,7 @@
 import 'reset-css';
 import './sass/fonts.sass';
 import './sass/global.sass';
+import './sass/smartgrid.sass';
 
 // Api
 import './api/slider';

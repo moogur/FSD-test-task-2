@@ -1,8 +1,8 @@
-/* eslint-disable wrap-iife */
 /* global jQuery */
 
-(function jq($) {
-  $.fn.dropdown = function pluginJQ(settings) {
+(($) => {
+  const jq = $;
+  jq.fn.dropdown = function pluginJQ(settings) {
     const options = $.extend({ data: [], buttons: false, all: false }, settings);
     return this.each(() => {
       const $root = $(this);
@@ -82,7 +82,7 @@
             if (ind === 1) placeholder += `${listPlaceholder[item]} ${options.data[item].title}... `;
           });
         }
-        $root.attr('placeholder', `${placeholder}`);
+        $root.attr('value', `${placeholder}`);
       }
 
       function setNewCnt(dataId, cnt) {

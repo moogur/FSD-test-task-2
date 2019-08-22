@@ -1,3 +1,5 @@
+@import '~grid'
+
 .header
   width: 100%
   background-color: #ffffff
@@ -15,3 +17,11 @@
       cursor: pointer
       align-self: center
       margin-top: 1px
+
+    &_block-992px
+      +lg('display', inline)
+      display: none
+      content: url('/img/menu.svg')
+      cursor: pointer
+      width: 32px
+

@@ -1,11 +1,10 @@
 /* global jQuery document window */
-/* eslint-disable wrap-iife */
-// eslint-disable-next-line no-multiple-empty-lines
 
-(function jq($) {
-  $.fn.rangeSlider = function pluginJQ(settings) {
+(($) => {
+  const jq = $;
+  jq.fn.rangeSlider = function pluginJQ(settings) {
     const options = $.extend({}, settings);
-    return this.each(function enumeration() {
+    return this.each(() => {
       const $root = $(this);
       const $slider = $('<section>')
         .addClass('range js-range')
@@ -24,7 +23,7 @@
       const $right = $(`.${options.right}`);
 
       function getStep() {
-        const stepPx = parseInt($slider.css('width'), 10) / options.max;
+        const stepPx = parseInt($root.css('width'), 10) / options.max;
         return stepPx * options.step;
       }
 

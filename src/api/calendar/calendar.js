@@ -1,15 +1,16 @@
 /* global jQuery */
-/* eslint-disable wrap-iife */
 
-(function jq($) {
-  $.fn.calendar = function pluginJQ(settings) {
+(($) => {
+  const jq = $;
+  jq.fn.calendar = function pluginJQ(settings) {
     const options = $.extend({}, settings);
     return this.each(() => {
       const weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
-      const listMonths = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+      const listMonths = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август'];
+      listMonths.push('Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь');
       let now = new Date();
       let month = new Date().getMonth();
-      let year = new Date().getFullYear();
+      const year = new Date().getFullYear();
       let predMonthDay = new Date(year, month - 1, 0).getDate();
       const number = parseInt(options.value, 10);
       let currentDataDay = number || -1;
@@ -27,7 +28,7 @@
       const $list = $('<ul>')
         .addClass('calendar__month-list')
         .appendTo($calendar);
-      const $prev = $('<li>')
+      $('<li>')
         .addClass('calendar__month-list-prev')
         .appendTo($list);
       const $header = $('<li>')
@@ -36,7 +37,7 @@
         .attr('data-year', `${year}`)
         .attr('data-month', `${month + 1}`)
         .appendTo($list);
-      const $next = $('<li>')
+      $('<li>')
         .addClass('calendar__month-list-next')
         .appendTo($list);
       const $table = $('<table>')
@@ -93,8 +94,6 @@
         lastBlank = newDays.length - 1 - lastBlank;
         $tbody.children().remove();
         newDays.forEach((item, ind) => {
-          let num = ind / 7;
-          num -= (num % 1);
           if (ind % 7 === 0) $('<tr>').appendTo($tbody);
           let MONTH = now.getMonth() + 1;
           let DAY = item.toString();
@@ -147,14 +146,15 @@
       }
 
       function setNewDay(target) {
-        if (target.dataset.predNextMonth) return;
+        const currentTarget = target;
+        if (currentTarget.dataset.predNextMonth) return;
         clearClass();
-        currentTableTd = parseInt(target.dataset.tableTd, 10);
+        currentTableTd = parseInt(currentTarget.dataset.tableTd, 10);
         if ($activeInput.hasClass('js-input-from') && staticTableTd < currentTableTd) return;
         if ($activeInput.hasClass('js-input-to') && staticTableTd > currentTableTd) return;
-        currentDataDay = target.dataset.day;
-        currentDate = target.dataset.day;
-        target.className = 'calendar__table-day_active';
+        currentDataDay = currentTarget.dataset.day;
+        currentDate = currentTarget.dataset.day;
+        currentTarget.className = 'calendar__table-day_active';
         if (staticData !== -1) {
           if (staticTableTd < currentTableTd) {
             for (let i = staticTableTd + 1; i < currentTableTd; i += 1) {
@@ -271,7 +271,7 @@
           const boolStatic = staticData !== -1;
           const boolActive = currentDate !== -1;
           if (boolStatic) {
-            const $static = $(`td[data-day="${staticData}"]`)
+            const $static = $(`td[data-day="${staticData}"]`);
             staticTableTd = parseInt($static.attr('data-table-td'), 10);
             $static.addClass('calendar__table-day_active');
           }

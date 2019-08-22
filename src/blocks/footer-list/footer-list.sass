@@ -1,4 +1,11 @@
+@import '~grid'
+
 .footer-list
+  +xxl('display', flex)
+  +xxl('flex-wrap', wrap)
+  +xxl('justify-content', space-around)
+  +md('padding-bottom', 70px)
+  +sm('padding-bottom', 40px)
   padding: 0px 20px 101px 20px;
   margin: 0 auto
   max-width: 1160px
@@ -33,6 +40,15 @@
         margin-top: 17px
 
     &_logo
+      +size-xxl(3)
+      +xxl('margin-right', 0px)
+      +xxl('max-width', none)
+      +size-md(4.5)
+      +md('margin-bottom', 20px)
+      +size-sm(6)
+      +to(480px)
+        width: 80%
+        text-align: center
       margin-right: 40px
       margin-top: 9px
       max-width: 260px
@@ -48,21 +64,55 @@
         text-transform: none
 
     &_navigation
+      +size-xxl(2)
+      +xxl('margin-right', 0px)
+      +xxl('max-width', none)
+      +size-md(3.5)
+      +md('margin-bottom', 20px)
+      +size-sm(6)
+      +to(480px)
+        width: 80%
+        text-align: center
       margin-right: 58px
       margin-top: 14px
       max-width: 143px
 
     &_about-us
+      +size-xxl(2)
+      +xxl('margin-right', 0px)
+      +xxl('max-width', none)
+      +size-md(3.5)
+      +md('margin-bottom', 20px)
+      +size-sm(6)
+      +to(480px)
+        width: 80%
+        text-align: center
       margin-right: 92px
       margin-top: 14px
       max-width: 143px
 
     &_support
+      +size-xxl(2)
+      +xxl('margin-right', 0px)
+      +xxl('max-width', none)
+      +size-md(3.5)
+      +size-sm(6)
+      +sm('margin-bottom', 20px)
+      +to(480px)
+        width: 80%
+        text-align: center
       margin-right: 52px
       margin-top: 14px
       max-width: 149px
 
     &_subscription
+      +size-xxl(3)
+      +xxl('max-width', none)
+      +size-md(4.5)
+      +size-sm(6)
+      +to(480px)
+        width: 80%
+        text-align: center
       margin-top: 14px
       max-width: 260px
 

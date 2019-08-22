@@ -1,4 +1,10 @@
+@import '~grid'
+
 .room-impressions
+  +md('float', none)
+  +md('margin', 0 auto 30px auto)
+  +md('text-align', start)
+  display: inline-block
   float: left
   margin-left: 82px
 
@@ -14,6 +20,7 @@
   &__circle
 
     &-container
+      display: inline-block
       position: relative
       float: left
 
@@ -72,6 +79,9 @@
         color: #BC9CFF
 
   &__list
+    +to(370px)
+      display: none
+    display: inline-block
     float: right
     margin: 26px 0 0 30px
     max-width: 170px
