@@ -47,12 +47,16 @@ const SASS = {
     loader: MiniCssExtractPlugin.loader,
     options: { hmr: NODE_ENV === 'development' }
   }, {
-    loader: 'css-loader'
+    loader: 'css-loader',
+    options: {
+      url: false
+    }
+  }, {
+    loader: 'resolve-url-loader'
   }, {
     loader: 'sass-loader',
     options: {
-      outputStyle: NODE_ENV === 'development' ? 'expanded' : 'compressed',
-      includePaths: [`${__dirname}/src/sass`]
+      outputStyle: NODE_ENV === 'development' ? 'expanded' : 'compressed'
     }
   }]
 };
